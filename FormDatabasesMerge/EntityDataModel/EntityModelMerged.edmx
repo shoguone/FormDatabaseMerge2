@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FormMergedModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FormMergedModelStoreContainer">
+          <EntitySet Name="Recruit" EntityType="FormMergedModel.Store.Recruit" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Squad" EntityType="FormMergedModel.Store.Squad" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <AssociationSet Name="FK_Recruit_Squad" Association="FormMergedModel.Store.FK_Recruit_Squad">
+            <End Role="Squad" EntitySet="Squad" />
+            <End Role="Recruit" EntitySet="Recruit" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Recruit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FAM" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IM" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OTCH" Type="nvarchar(max)" />
+          <Property Name="D_ROD" Type="datetime" />
+          <Property Name="RVK" Type="nvarchar(max)" />
+          <Property Name="N_KOM" Type="nvarchar(max)" />
+          <Property Name="FL_UB" Type="int" />
+          <Property Name="SPEC" Type="nvarchar(max)" />
+          <Property Name="BRAK" Type="nvarchar(max)" />
+          <Property Name="SUD" Type="nvarchar(max)" />
+          <Property Name="OBRAZOV" Type="nvarchar(max)" />
+          <Property Name="PROF_P" Type="nvarchar(max)" />
+          <Property Name="NPU" Type="nvarchar(max)" />
+          <Property Name="REZH_KOM" Type="nvarchar(max)" />
+          <Property Name="GODN" Type="nvarchar(max)" />
+          <Property Name="P_PREDN" Type="int" />
+          <Property Name="TDT" Type="nvarchar(max)" />
+          <Property Name="F_DOP" Type="int" />
+          <Property Name="N_DOP" Type="nvarchar(max)" />
+          <Property Name="D_PRIB" Type="datetime" />
+          <Property Name="FL_UV" Type="int" />
+          <Property Name="D_U_UVOL" Type="datetime" />
+          <Property Name="D_P_UVOL" Type="datetime" />
+          <Property Name="FL_SOCH" Type="int" />
+          <Property Name="D_U_SOCH" Type="datetime" />
+          <Property Name="HIST" Type="nvarchar(max)" />
+          <Property Name="ROST" Type="int" />
+          <Property Name="MASSA" Type="int" />
+          <Property Name="STAT" Type="nvarchar(max)" />
+          <Property Name="S_V_BIL" Type="nvarchar(max)" />
+          <Property Name="N_V_BIL" Type="nvarchar(max)" />
+          <Property Name="PRIM" Type="nvarchar(max)" />
+          <Property Name="PR_UBIT" Type="nvarchar(max)" />
+          <Property Name="PRIM_UBIT" Type="nvarchar(max)" />
+          <Property Name="ZREN" Type="nvarchar(max)" />
+          <Property Name="R_G_U" Type="nvarchar(max)" />
+          <Property Name="R_O_G" Type="nvarchar(max)" />
+          <Property Name="R_OB" Type="nvarchar(max)" />
+          <Property Name="H" Type="nvarchar(max)" />
+          <Property Name="POSTO" Type="int" />
+          <Property Name="LN_SER" Type="nvarchar(max)" />
+          <Property Name="LN_NUM" Type="nvarchar(max)" />
+          <Property Name="S_PASPORT" Type="nvarchar(max)" />
+          <Property Name="D_PASPORT" Type="datetime" />
+          <Property Name="IMEET_RAZR" Type="int" />
+          <Property Name="IMEET_REB" Type="int" />
+          <Property Name="ODIN_ROD" Type="int" />
+          <Property Name="BEZ_ROD" Type="int" />
+          <Property Name="DO_PRIZ" Type="nvarchar(max)" />
+          <Property Name="NA_UCHETE" Type="nvarchar(max)" />
+          <Property Name="NAVY" Type="int" />
+          <Property Name="S_VA" Type="nvarchar(max)" />
+          <Property Name="M_ROD" Type="nvarchar(max)" />
+          <Property Name="KEM_VIDAN" Type="nvarchar(max)" />
+          <Property Name="TSP" Type="int" />
+          <Property Name="SeasonID" Type="int" Nullable="false" />
+          <Property Name="SeasonYear" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SeasonNumber" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MergeDate" Type="datetime" Nullable="false" />
+          <Property Name="MergeTime" Type="time" Nullable="false" />
+          <Property Name="KomID" Type="int" Nullable="false" />
+          <Property Name="D_DOP" Type="datetime" />
+          <Property Name="N_PASPORT" Type="nvarchar(max)" />
+          <Property Name="N_VA" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Squad">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="N_KOM" Type="nvarchar(max)" />
+          <Property Name="V_VS" Type="nvarchar(max)" />
+          <Property Name="N_E" Type="nvarchar(max)" />
+          <Property Name="ST" Type="nvarchar(max)" />
+          <Property Name="V_CH" Type="nvarchar(max)" />
+          <Property Name="REZH_KOM" Type="nvarchar(max)" />
+          <Property Name="D_OTPR" Type="datetime" />
+          <Property Name="V_SHET" Type="nvarchar(max)" />
+          <Property Name="VSEGO" Type="int" />
+          <Property Name="VA" Type="int" />
+          <Property Name="MTLB" Type="int" />
+          <Property Name="SUD" Type="int" />
+          <Property Name="Z_PREDS" Type="nvarchar(max)" />
+          <Property Name="PREDS" Type="nvarchar(max)" />
+          <Property Name="S_UD" Type="nvarchar(max)" />
+          <Property Name="N_UD" Type="nvarchar(max)" />
+          <Property Name="VIDAN" Type="nvarchar(max)" />
+          <Property Name="D_VID" Type="datetime" />
+          <Property Name="PRIM" Type="nvarchar(max)" />
+          <Property Name="SPEC" Type="nvarchar(max)" />
+          <Property Name="VUS1" Type="nvarchar(max)" />
+          <Property Name="VUS2" Type="nvarchar(max)" />
+          <Property Name="VUS3" Type="nvarchar(max)" />
+          <Property Name="PR" Type="int" />
+          <Property Name="D_PR" Type="datetime" />
+          <Property Name="RAILROAD" Type="nvarchar(max)" />
+          <Property Name="V_OKRUG" Type="nvarchar(max)" />
+          <Property Name="FL_UB" Type="int" />
+          <Property Name="FL_PEREOD" Type="int" />
+          <Property Name="NARAD" Type="int" />
+          <Property Name="GOROD" Type="nvarchar(max)" />
+          <Property Name="STREET" Type="nvarchar(max)" />
+          <Property Name="PHONE" Type="nvarchar(max)" />
+          <Property Name="ZIP" Type="nvarchar(max)" />
+          <Property Name="ISSIBVO" Type="int" />
+          <Property Name="DOLJNOST" Type="nvarchar(max)" />
+          <Property Name="FOLLOW_OFICER" Type="int" />
+          <Property Name="FOLLOW_PRAPOR" Type="int" />
+          <Property Name="FOLLOW_SOLDERS" Type="int" />
+          <Property Name="NVESHAT" Type="nvarchar(max)" />
+          <Property Name="DVESHAT" Type="datetime" />
+          <Property Name="KOLSUHPAY" Type="int" />
+          <Property Name="SYST" Type="int" />
+          <Property Name="POEZD" Type="nvarchar(max)" />
+          <Property Name="VID_TR" Type="nvarchar(max)" />
+          <Property Name="T_OTPR" Type="nvarchar(max)" />
+          <Property Name="N_DOV" Type="nvarchar(max)" />
+          <Property Name="D_DOV" Type="datetime" />
+          <Property Name="FL_DISPLAY" Type="int" />
+          <Property Name="DOPUSK" Type="int" />
+          <Property Name="SeasonID" Type="int" Nullable="false" />
+          <Property Name="SeasonYear" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SeasonNumber" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="MergeDate" Type="datetime" Nullable="false" />
+          <Property Name="MergeTime" Type="time" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Recruit_Squad">
+          <End Role="Squad" Type="FormMergedModel.Store.Squad" Multiplicity="1" />
+          <End Role="Recruit" Type="FormMergedModel.Store.Recruit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Squad">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Recruit">
+              <PropertyRef Name="KomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FormMergedModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="FormMergedEntities">
+          <EntitySet Name="Recruit" EntityType="FormMergedModel.Recruit" />
+          <EntitySet Name="Squad" EntityType="FormMergedModel.Squad" />
+          <AssociationSet Name="FK_Recruit_Squad" Association="FormMergedModel.FK_Recruit_Squad">
+            <End Role="Squad" EntitySet="Squad" />
+            <End Role="Recruit" EntitySet="Recruit" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Recruit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="FAM" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IM" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OTCH" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="D_ROD" />
+          <Property Type="String" Name="RVK" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="N_KOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FL_UB" />
+          <Property Type="String" Name="SPEC" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BRAK" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SUD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OBRAZOV" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PROF_P" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NPU" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REZH_KOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GODN" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="P_PREDN" />
+          <Property Type="String" Name="TDT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="F_DOP" />
+          <Property Type="String" Name="N_DOP" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="D_PRIB" />
+          <Property Type="Int32" Name="FL_UV" />
+          <Property Type="DateTime" Name="D_U_UVOL" />
+          <Property Type="DateTime" Name="D_P_UVOL" />
+          <Property Type="Int32" Name="FL_SOCH" />
+          <Property Type="DateTime" Name="D_U_SOCH" />
+          <Property Type="String" Name="HIST" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ROST" />
+          <Property Type="Int32" Name="MASSA" />
+          <Property Type="String" Name="STAT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_V_BIL" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="N_V_BIL" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRIM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PR_UBIT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PRIM_UBIT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZREN" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="R_G_U" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="R_O_G" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="R_OB" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="H" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="POSTO" />
+          <Property Type="String" Name="LN_SER" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LN_NUM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_PASPORT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="D_PASPORT" />
+          <Property Type="Int32" Name="IMEET_RAZR" />
+          <Property Type="Int32" Name="IMEET_REB" />
+          <Property Type="Int32" Name="ODIN_ROD" />
+          <Property Type="Int32" Name="BEZ_ROD" />
+          <Property Type="String" Name="DO_PRIZ" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NA_UCHETE" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="NAVY" />
+          <Property Type="String" Name="S_VA" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="M_ROD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KEM_VIDAN" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TSP" />
+          <Property Type="Int32" Name="SeasonID" Nullable="false" />
+          <Property Type="String" Name="SeasonYear" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SeasonNumber" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="MergeDate" Nullable="false" />
+          <Property Type="Time" Name="MergeTime" Nullable="false" />
+          <Property Type="DateTime" Name="D_DOP" />
+          <Property Type="String" Name="N_PASPORT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="N_VA" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Squad" Relationship="FormMergedModel.FK_Recruit_Squad" FromRole="Recruit" ToRole="Squad" />
+        </EntityType>
+        <EntityType Name="Squad">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="N_KOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="V_VS" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="N_E" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ST" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="V_CH" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REZH_KOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="D_OTPR" />
+          <Property Type="String" Name="V_SHET" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="VSEGO" />
+          <Property Type="Int32" Name="VA" />
+          <Property Type="Int32" Name="MTLB" />
+          <Property Type="Int32" Name="SUD" />
+          <Property Type="String" Name="Z_PREDS" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PREDS" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_UD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="N_UD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VIDAN" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="D_VID" />
+          <Property Type="String" Name="PRIM" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SPEC" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VUS1" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VUS2" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VUS3" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PR" />
+          <Property Type="DateTime" Name="D_PR" />
+          <Property Type="String" Name="RAILROAD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="V_OKRUG" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FL_UB" />
+          <Property Type="Int32" Name="FL_PEREOD" />
+          <Property Type="Int32" Name="NARAD" />
+          <Property Type="String" Name="GOROD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STREET" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PHONE" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZIP" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ISSIBVO" />
+          <Property Type="String" Name="DOLJNOST" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FOLLOW_OFICER" />
+          <Property Type="Int32" Name="FOLLOW_PRAPOR" />
+          <Property Type="Int32" Name="FOLLOW_SOLDERS" />
+          <Property Type="String" Name="NVESHAT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DVESHAT" />
+          <Property Type="Int32" Name="KOLSUHPAY" />
+          <Property Type="Int32" Name="SYST" />
+          <Property Type="String" Name="POEZD" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VID_TR" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="T_OTPR" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="N_DOV" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="D_DOV" />
+          <Property Type="Int32" Name="FL_DISPLAY" />
+          <Property Type="Int32" Name="DOPUSK" />
+          <Property Type="Int32" Name="SeasonID" Nullable="false" />
+          <Property Type="String" Name="SeasonYear" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SeasonNumber" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="MergeDate" Nullable="false" />
+          <Property Type="Time" Name="MergeTime" Nullable="false" />
+          <NavigationProperty Name="Recruit" Relationship="FormMergedModel.FK_Recruit_Squad" FromRole="Squad" ToRole="Recruit" />
+        </EntityType>
+        <Association Name="FK_Recruit_Squad">
+          <End Type="FormMergedModel.Squad" Role="Squad" Multiplicity="1" />
+          <End Type="FormMergedModel.Recruit" Role="Recruit" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FormMergedModelStoreContainer" CdmEntityContainer="FormMergedEntities">
+          <EntitySetMapping Name="Recruit">
+            <EntityTypeMapping TypeName="FormMergedModel.Recruit">
+              <MappingFragment StoreEntitySet="Recruit">
+                <ScalarProperty Name="N_VA" ColumnName="N_VA" />
+                <ScalarProperty Name="N_PASPORT" ColumnName="N_PASPORT" />
+                <ScalarProperty Name="D_DOP" ColumnName="D_DOP" />
+                <ScalarProperty Name="MergeTime" ColumnName="MergeTime" />
+                <ScalarProperty Name="MergeDate" ColumnName="MergeDate" />
+                <ScalarProperty Name="SeasonNumber" ColumnName="SeasonNumber" />
+                <ScalarProperty Name="SeasonYear" ColumnName="SeasonYear" />
+                <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+                <ScalarProperty Name="TSP" ColumnName="TSP" />
+                <ScalarProperty Name="KEM_VIDAN" ColumnName="KEM_VIDAN" />
+                <ScalarProperty Name="M_ROD" ColumnName="M_ROD" />
+                <ScalarProperty Name="S_VA" ColumnName="S_VA" />
+                <ScalarProperty Name="NAVY" ColumnName="NAVY" />
+                <ScalarProperty Name="NA_UCHETE" ColumnName="NA_UCHETE" />
+                <ScalarProperty Name="DO_PRIZ" ColumnName="DO_PRIZ" />
+                <ScalarProperty Name="BEZ_ROD" ColumnName="BEZ_ROD" />
+                <ScalarProperty Name="ODIN_ROD" ColumnName="ODIN_ROD" />
+                <ScalarProperty Name="IMEET_REB" ColumnName="IMEET_REB" />
+                <ScalarProperty Name="IMEET_RAZR" ColumnName="IMEET_RAZR" />
+                <ScalarProperty Name="D_PASPORT" ColumnName="D_PASPORT" />
+                <ScalarProperty Name="S_PASPORT" ColumnName="S_PASPORT" />
+                <ScalarProperty Name="LN_NUM" ColumnName="LN_NUM" />
+                <ScalarProperty Name="LN_SER" ColumnName="LN_SER" />
+                <ScalarProperty Name="POSTO" ColumnName="POSTO" />
+                <ScalarProperty Name="H" ColumnName="H" />
+                <ScalarProperty Name="R_OB" ColumnName="R_OB" />
+                <ScalarProperty Name="R_O_G" ColumnName="R_O_G" />
+                <ScalarProperty Name="R_G_U" ColumnName="R_G_U" />
+                <ScalarProperty Name="ZREN" ColumnName="ZREN" />
+                <ScalarProperty Name="PRIM_UBIT" ColumnName="PRIM_UBIT" />
+                <ScalarProperty Name="PR_UBIT" ColumnName="PR_UBIT" />
+                <ScalarProperty Name="PRIM" ColumnName="PRIM" />
+                <ScalarProperty Name="N_V_BIL" ColumnName="N_V_BIL" />
+                <ScalarProperty Name="S_V_BIL" ColumnName="S_V_BIL" />
+                <ScalarProperty Name="STAT" ColumnName="STAT" />
+                <ScalarProperty Name="MASSA" ColumnName="MASSA" />
+                <ScalarProperty Name="ROST" ColumnName="ROST" />
+                <ScalarProperty Name="HIST" ColumnName="HIST" />
+                <ScalarProperty Name="D_U_SOCH" ColumnName="D_U_SOCH" />
+                <ScalarProperty Name="FL_SOCH" ColumnName="FL_SOCH" />
+                <ScalarProperty Name="D_P_UVOL" ColumnName="D_P_UVOL" />
+                <ScalarProperty Name="D_U_UVOL" ColumnName="D_U_UVOL" />
+                <ScalarProperty Name="FL_UV" ColumnName="FL_UV" />
+                <ScalarProperty Name="D_PRIB" ColumnName="D_PRIB" />
+                <ScalarProperty Name="N_DOP" ColumnName="N_DOP" />
+                <ScalarProperty Name="F_DOP" ColumnName="F_DOP" />
+                <ScalarProperty Name="TDT" ColumnName="TDT" />
+                <ScalarProperty Name="P_PREDN" ColumnName="P_PREDN" />
+                <ScalarProperty Name="GODN" ColumnName="GODN" />
+                <ScalarProperty Name="REZH_KOM" ColumnName="REZH_KOM" />
+                <ScalarProperty Name="NPU" ColumnName="NPU" />
+                <ScalarProperty Name="PROF_P" ColumnName="PROF_P" />
+                <ScalarProperty Name="OBRAZOV" ColumnName="OBRAZOV" />
+                <ScalarProperty Name="SUD" ColumnName="SUD" />
+                <ScalarProperty Name="BRAK" ColumnName="BRAK" />
+                <ScalarProperty Name="SPEC" ColumnName="SPEC" />
+                <ScalarProperty Name="FL_UB" ColumnName="FL_UB" />
+                <ScalarProperty Name="N_KOM" ColumnName="N_KOM" />
+                <ScalarProperty Name="RVK" ColumnName="RVK" />
+                <ScalarProperty Name="D_ROD" ColumnName="D_ROD" />
+                <ScalarProperty Name="OTCH" ColumnName="OTCH" />
+                <ScalarProperty Name="IM" ColumnName="IM" />
+                <ScalarProperty Name="FAM" ColumnName="FAM" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Squad">
+            <EntityTypeMapping TypeName="FormMergedModel.Squad">
+              <MappingFragment StoreEntitySet="Squad">
+                <ScalarProperty Name="MergeTime" ColumnName="MergeTime" />
+                <ScalarProperty Name="MergeDate" ColumnName="MergeDate" />
+                <ScalarProperty Name="SeasonNumber" ColumnName="SeasonNumber" />
+                <ScalarProperty Name="SeasonYear" ColumnName="SeasonYear" />
+                <ScalarProperty Name="SeasonID" ColumnName="SeasonID" />
+                <ScalarProperty Name="DOPUSK" ColumnName="DOPUSK" />
+                <ScalarProperty Name="FL_DISPLAY" ColumnName="FL_DISPLAY" />
+                <ScalarProperty Name="D_DOV" ColumnName="D_DOV" />
+                <ScalarProperty Name="N_DOV" ColumnName="N_DOV" />
+                <ScalarProperty Name="T_OTPR" ColumnName="T_OTPR" />
+                <ScalarProperty Name="VID_TR" ColumnName="VID_TR" />
+                <ScalarProperty Name="POEZD" ColumnName="POEZD" />
+                <ScalarProperty Name="SYST" ColumnName="SYST" />
+                <ScalarProperty Name="KOLSUHPAY" ColumnName="KOLSUHPAY" />
+                <ScalarProperty Name="DVESHAT" ColumnName="DVESHAT" />
+                <ScalarProperty Name="NVESHAT" ColumnName="NVESHAT" />
+                <ScalarProperty Name="FOLLOW_SOLDERS" ColumnName="FOLLOW_SOLDERS" />
+                <ScalarProperty Name="FOLLOW_PRAPOR" ColumnName="FOLLOW_PRAPOR" />
+                <ScalarProperty Name="FOLLOW_OFICER" ColumnName="FOLLOW_OFICER" />
+                <ScalarProperty Name="DOLJNOST" ColumnName="DOLJNOST" />
+                <ScalarProperty Name="ISSIBVO" ColumnName="ISSIBVO" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+                <ScalarProperty Name="STREET" ColumnName="STREET" />
+                <ScalarProperty Name="GOROD" ColumnName="GOROD" />
+                <ScalarProperty Name="NARAD" ColumnName="NARAD" />
+                <ScalarProperty Name="FL_PEREOD" ColumnName="FL_PEREOD" />
+                <ScalarProperty Name="FL_UB" ColumnName="FL_UB" />
+                <ScalarProperty Name="V_OKRUG" ColumnName="V_OKRUG" />
+                <ScalarProperty Name="RAILROAD" ColumnName="RAILROAD" />
+                <ScalarProperty Name="D_PR" ColumnName="D_PR" />
+                <ScalarProperty Name="PR" ColumnName="PR" />
+                <ScalarProperty Name="VUS3" ColumnName="VUS3" />
+                <ScalarProperty Name="VUS2" ColumnName="VUS2" />
+                <ScalarProperty Name="VUS1" ColumnName="VUS1" />
+                <ScalarProperty Name="SPEC" ColumnName="SPEC" />
+                <ScalarProperty Name="PRIM" ColumnName="PRIM" />
+                <ScalarProperty Name="D_VID" ColumnName="D_VID" />
+                <ScalarProperty Name="VIDAN" ColumnName="VIDAN" />
+                <ScalarProperty Name="N_UD" ColumnName="N_UD" />
+                <ScalarProperty Name="S_UD" ColumnName="S_UD" />
+                <ScalarProperty Name="PREDS" ColumnName="PREDS" />
+                <ScalarProperty Name="Z_PREDS" ColumnName="Z_PREDS" />
+                <ScalarProperty Name="SUD" ColumnName="SUD" />
+                <ScalarProperty Name="MTLB" ColumnName="MTLB" />
+                <ScalarProperty Name="VA" ColumnName="VA" />
+                <ScalarProperty Name="VSEGO" ColumnName="VSEGO" />
+                <ScalarProperty Name="V_SHET" ColumnName="V_SHET" />
+                <ScalarProperty Name="D_OTPR" ColumnName="D_OTPR" />
+                <ScalarProperty Name="REZH_KOM" ColumnName="REZH_KOM" />
+                <ScalarProperty Name="V_CH" ColumnName="V_CH" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="N_E" ColumnName="N_E" />
+                <ScalarProperty Name="V_VS" ColumnName="V_VS" />
+                <ScalarProperty Name="N_KOM" ColumnName="N_KOM" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_Recruit_Squad" TypeName="FormMergedModel.FK_Recruit_Squad" StoreEntitySet="Recruit">
+            <EndProperty Name="Recruit">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+            <EndProperty Name="Squad">
+              <ScalarProperty Name="ID" ColumnName="KomID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EntityModelMerged" ZoomLevel="61">
+        <EntityTypeShape EntityType="FormMergedModel.Recruit" Width="1.5" PointX="3" PointY="1.5" Height="13.518372395833332" />
+        <EntityTypeShape EntityType="FormMergedModel.Squad" Width="1.5" PointX="0.75" PointY="2.25" Height="11.9799609375" />
+        <AssociationConnector Association="FormMergedModel.FK_Recruit_Squad">
+          <ConnectorPoint PointX="2.25" PointY="8.23998046875" />
+          <ConnectorPoint PointX="3" PointY="8.23998046875" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
