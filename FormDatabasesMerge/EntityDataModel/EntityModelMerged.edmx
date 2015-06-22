@@ -470,7 +470,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="EntityModelMerged" ZoomLevel="61">
+      <Diagram Name="EntityModelMerged" ZoomLevel="52">
         <EntityTypeShape EntityType="FormMergedModel.Recruit" Width="1.5" PointX="3" PointY="1.5" Height="13.518372395833332" />
         <EntityTypeShape EntityType="FormMergedModel.Squad" Width="1.5" PointX="0.75" PointY="2.25" Height="11.9799609375" />
         <AssociationConnector Association="FormMergedModel.FK_Recruit_Squad">

@@ -74,6 +74,14 @@ namespace FormDatabasesMerge
         {
             InitializeComponent();
 
+            using (EntityContextGeneral ctxg = new EntityContextGeneral())
+            {
+                var sns = ctxg.PRIZ
+                    .Select(p => new Season(p))
+                    .OrderByDescending(p => p.DateTime)
+                    .ToList();
+            }
+
             Init();
 
             //try
